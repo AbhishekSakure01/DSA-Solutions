@@ -16,3 +16,24 @@ class Solution {
         return last;
     }
 }
+
+/*
+Iterative Approach:
+1. Use three pointers: prev, curr, next
+2. Traverse the list and reverse links one by one
+3. Move pointers forward
+4. Return prev as new head
+
+public ListNode reverseList(ListNode head) {
+    ListNode prev = null;
+    ListNode curr = head;
+
+    while (curr != null) {
+        ListNode next = curr.next;
+        curr.next = prev;
+        prev = curr;
+        curr = next;
+    }
+    return prev;
+}
+*/
